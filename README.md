@@ -1,10 +1,6 @@
 ID_Generator
 =========
 
-[![Build Status](https://travis-ci.org/sony/sonyflake.svg?branch=master)](https://travis-ci.org/sony/sonyflake)
-[![Coverage Status](https://coveralls.io/repos/sony/sonyflake/badge.svg?branch=master&service=github)](https://coveralls.io/github/sony/sonyflake?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/sony/sonyflake)](https://goreportcard.com/report/github.com/sony/sonyflake)
-
 ID_Generator is a distributed unique ID generator inspired by [Snowflake](https://blog.twitter.com/2010/announcing-snowflake) and [Sonyflake](https://github.com/sony/sonyflake). 
 
 This generator can support customized ID settings for different requirements. The default settings contains:
@@ -83,4 +79,4 @@ License
 
 The MIT License (MIT)
 
-See [LICENSE](https://github.com/sony/sonyflake/blob/master/LICENSE) for details.
+See [LICENSE](https://github.com/bedman516/ID_Generator/blob/main/LICENSE) for details.
