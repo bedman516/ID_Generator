@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/bedman516/ID_Generator)](https://goreportcard.com/report/github.com/bedman516/ID_Generator)
+
 ID_Generator
 =========
 
@@ -62,11 +64,12 @@ type FactoryConfig struct {
 }
 ```
 
-To get a factory instance, just call  NewIDFactory
+To get a factory instance, just call  NewIDFactory. 
+(After you call NewIDFactory, it will increase waitGroup counter of factory instance by 1)
+
 ```go
 func NewIDFactory(w *FactoryConfig) (*IDFactory, error) 
 ```
-After you call NewIDFactory, it will increase waitGroup counter of factory instance by 1.
 
 To print IDs,  you will need to run Produce and Consume methods. IDs will be printed in Consume method, and feel free to modify it for your own need.
 ```go
