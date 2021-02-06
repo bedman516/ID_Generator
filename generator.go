@@ -11,7 +11,7 @@ import (
 /**
 Default settings
 1. Time can be up to 2^38
-2. Support machiens up to 2^16
+2. Support machines up to 2^16
 3. Rate is 1ms -> 2^10 ids
 4. Time unit of genertor: 1ms
 **/
@@ -22,8 +22,8 @@ const (
 	TIMEUNIT    = time.Millisecond
 )
 
+// IDConfig - Configuration of ID generator
 /**
- * IDConfig - Configuration of ID generator
  * TimeBit - TimeBit defines the maximum value of generator expiration time
  * MachineBit - defines the maximum number of machines
  * SequenceBit - defines the maximum ID that can be generated during the time interval
@@ -39,8 +39,8 @@ type IDConfig struct {
 	GenerationRate time.Duration
 }
 
+// Generator - ID generator
 /**
- * Generator - ID generator
  * SeqenceNum - Sequence counter, will roll over when it gets maximum
  * MachineID - Unique ID for machine
  * TimeCounter - Time counter, when it gets 2^timebits, this generator will expire

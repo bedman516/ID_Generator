@@ -18,11 +18,13 @@ func (pq PriorityQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
 }
 
+// Push - pushes the item into the queue
 func (pq *PriorityQueue) Push(x interface{}) {
 	item := x.(*ID)
 	*pq = append(*pq, item)
 }
 
+// Pop - pops the min(time) item
 func (pq *PriorityQueue) Pop() interface{} {
 	old := *pq
 	n := len(old)

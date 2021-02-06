@@ -7,9 +7,8 @@ import (
 	"sync"
 )
 
+// FactoryConfig - configuration for building the ID facotry
 /**
- * FactoryConfig - configuration for building the ID facotry
- *
  * NumOfWorkers - how many producers
  * NumOfIDsPerWorker - how much work per producer
  * WorkerID - producer ids, must be unique, will be used as machine id later
@@ -23,9 +22,8 @@ type FactoryConfig struct {
 	IDConfig          *IDConfig
 }
 
+// IDFactory - instance of facotry which produces IDs
 /**
- * IDFactory - instance of facotry which produces IDs
- *
  * idQueue - priorityQueue for get ordered IDs
  * mutex - prevent racing between popping and pushing
  * HasWork - check all tasks done or not
@@ -40,9 +38,8 @@ type IDFactory struct {
 	HasWork       sync.WaitGroup
 }
 
-/**
- * Worker - producer instance
- * generator - ID generator
+// Worker - producer instance
+/** generator - ID generator
  * workNum - work number for each worker
  */
 type Worker struct {

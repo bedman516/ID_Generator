@@ -48,7 +48,7 @@ func TestNewIDGenerator(t *testing.T) {
 	config.SequenceBit = 10
 	config.TimeBit = 40
 	config.MachineBit = 16
-	g, err = NewIDGenerator(&config)
+	_, err = NewIDGenerator(&config)
 	if err == nil {
 		t.Errorf("Generator should not be created due to bits are greater than 64 %v", err)
 	}
@@ -57,7 +57,7 @@ func TestNewIDGenerator(t *testing.T) {
 	config.SequenceBit = 8
 	config.TimeBit = 15
 	config.MachineBit = 5
-	g, err = NewIDGenerator(&config)
+	_, err = NewIDGenerator(&config)
 	if err != nil {
 		t.Errorf("Generator should be created successfully, but got %v", err)
 	}
